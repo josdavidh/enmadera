@@ -110,7 +110,6 @@ nav.container{
 
   padding: 20px 0;
   display: grid;
-  /* justify-content: space-around; */
   gap: 2px;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
@@ -172,6 +171,14 @@ nav.container{
 
 .nav__item{
   list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item--button {
+  justify-self: center;
+  position: absolute;
+  bottom: 40px;
 }
 
 .nav__link{
@@ -180,6 +187,45 @@ nav.container{
   font-size: 1.6rem;
   letter-spacing: 2px;
 }
+
+.btn__contact {
+  font-size: 1.8rem;
+  position: relative;
+  border: 1px solid #121212;
+  padding: 15px 32px;
+  background-color: transparent;
+	transition: 0.3s ease-in-out;
+}
+
+.btn__contact span {
+  z-index: 1;
+}
+
+.btn__contact::before {
+  content: "";
+  width: 0%;
+  position: absolute;
+  background-color: #121212;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.btn__contact:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn__contact:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+
 
 @media (min-width:768px) {
   .nav{
@@ -205,7 +251,13 @@ nav.container{
   }
 
   .nav__link{
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       letter-spacing: none;
+  }
+
+  .nav__item--button {
+    position: unset;
+    margin-left: 18px;
+
   }
 }
