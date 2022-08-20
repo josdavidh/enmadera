@@ -75,6 +75,7 @@ img {
 
 button {
   border: 0;
+  cursor: pointer;
   background-color: transparent;
 }
 
@@ -93,7 +94,7 @@ nav.container{
   overflow: hidden;
 }
 
-/* .hero{
+/* .header{
   background-image: 
   linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
   url('../assets/img/hero.jpg');
@@ -260,4 +261,48 @@ nav.container{
     margin-left: 18px;
 
   }
+}
+
+/* Header Main */
+.header__main::before{
+  content: "";
+  display: block;
+  height: 370px;
+  background-image: url("../assets/img/closet1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header__main {
+  background-color: var(--darkBeige);
+}
+
+.header__texts {
+  color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.header__title h1{
+  font-size: 3.2rem;
+  letter-spacing: 1px;
+}
+
+.header__description {
+  margin-top: 12px;
+}
+
+.header__description p{
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+}
+
+.header__button {
+  margin-top: 25px;
+}
+
+.logo {
+  width: 320px;
 }
