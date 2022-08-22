@@ -69,10 +69,6 @@ a:hover {
   text-decoration: none;
 }
 
-/* img {
-  width: 100%;
-  height: auto;
-} */
 
 button {
   border: 0;
@@ -94,16 +90,6 @@ nav.container{
   max-width: 1200px;
   overflow: hidden;
 }
-
-/* .header{
-  background-image: 
-  linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-  url('../assets/img/hero.jpg');
-  background-size: cover;
-  min-height: 500px;
-  height: 100vh;
-  color: #fff;
-} */
 
 .nav{
   --state-close: scale(0); /* default: hidden*/
@@ -193,10 +179,19 @@ nav.container{
 .btn__contact {
   font-size: 1.8rem;
   position: relative;
-  border: 1px solid #121212;
   padding: 15px 32px;
   background-color: transparent;
 	transition: 0.3s ease-in-out;
+}
+
+.btn__contact.dark {
+  border: 1px solid #121212;
+  color: #121212;
+}
+
+.btn__contact.light {
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .btn__contact span {
@@ -207,23 +202,33 @@ nav.container{
   content: "";
   width: 0%;
   position: absolute;
-  background-color: #121212;
   left: 0;
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
 
-.btn__contact:hover {
+.btn__contact.dark::before{
+  background-color: #121212;
+}
+
+.btn__contact.light::before{
+  background-color: #fff;
+}
+
+
+.btn__contact.dark:hover {
   color: #fff;
-  border: 1px solid #fff;
+}
+
+.btn__contact.light:hover {
+  color: #121212;
 }
 
 .btn__contact:hover::before {
   content: "";
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 
 
@@ -301,6 +306,8 @@ nav.container{
 }
 
 .header__button {
+  position: relative;
+  z-index: 1;
   margin-top: 25px;
 }
 
