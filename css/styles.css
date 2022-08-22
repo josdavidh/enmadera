@@ -39,6 +39,7 @@ body {
   --darkBeige: #402e32;
   --middleBeige: #ac8b67;
   --softBeige: #fff8ee;
+  --transparentBrown: #20100ebb;
 }
 
 h1,
@@ -68,10 +69,10 @@ a:hover {
   text-decoration: none;
 }
 
-img {
+/* img {
   width: 100%;
   height: auto;
-}
+} */
 
 button {
   border: 0;
@@ -274,7 +275,7 @@ nav.container{
 }
 
 .header__main {
-  background-color: var(--darkBeige);
+  background-color: var(--darkBrown);
 }
 
 .header__texts {
@@ -303,6 +304,69 @@ nav.container{
   margin-top: 25px;
 }
 
-.logo {
-  width: 320px;
+/* Servicios */
+.services{
+  display: grid;
+  justify-content: center;
+}
+
+.services__title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.services__title h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--darkBrown);
+}
+
+.services__title h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--transparentBrown);
+}
+
+.services__container {
+  width: 100%;
+  min-width: 280px;
+  max-width: 2000px;
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services__item {
+  display: flex;
+  width: 100%;
+  min-width: 270px;
+  max-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 25px;
+}
+
+.services__item img {
+  margin-left: 5px;
+}
+
+.services__texts {
+  text-align: center;
+}
+
+.services__item h4,
+.services__item p {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.services__item h4 {
+  font-size: 2.2rem;
+}
+
+.services__item p {
+  font-size: 1.5rem;
+  overflow: hidden;
+  color: var(--transparentBrown);
 }
