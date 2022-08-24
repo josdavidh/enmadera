@@ -82,6 +82,13 @@ select:focus {
   outline: none;
 }
 
+.header {
+  position: relative;
+  max-width: 1700px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
 /*Navbar*/
 
 nav.container{
@@ -182,6 +189,18 @@ nav.container{
   padding: 15px 32px;
   background-color: transparent;
 	transition: 0.3s ease-in-out;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn__contact.whatsapp{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn__contact.whatsapp i {
+  margin-left: 8px;
 }
 
 .btn__contact.dark {
@@ -313,6 +332,24 @@ nav.container{
   margin-top: 25px;
 }
 
+.header__whatsapp {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  bottom: 0;
+  transform: translate(-25%, -20%);
+  color: #ffff;
+  background-color: #0dc042;
+  padding: 8px 11px;
+  border-radius: 100%;
+  box-shadow: 0 1px 5px #212529;
+  transition: .4s ease-in-out;
+}
+
+.header__whatsapp:hover {
+  background-color: #0eae3e;
+}
+
 @media (min-width:768px){
 
   .header__main {
@@ -343,30 +380,34 @@ nav.container{
 .services{
   display: grid;
   justify-content: center;
+  position: relative;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
-.services__title {
-  text-align: center;
-  margin-top: 40px;
+
+.services__logo {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  width: 320px;
+  height: 148px;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
 }
 
 .services__title h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--darkBrown);
-}
-
-.services__title h3 {
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--transparentBrown);
 }
 
 .services__container {
   width: 100%;
   min-width: 280px;
-  max-width: 2000px;
-  margin: 30px 0;
+  margin: 100px 0 10px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -406,6 +447,17 @@ nav.container{
   color: var(--transparentBrown);
 }
 
+@media (min-width:768px) {
+  .services__logo {
+    left: 23%;
+    transform: translate(0, -80%);
+  }
+  
+  .services__container{
+    margin-top: 20px;
+  }
+}
+
 /* About Section */
 .about {
   display: grid;
@@ -425,7 +477,7 @@ nav.container{
 .about__img1 {
   grid-area: image1;
   height: 300px;
-  background-image: url("../assets/img/muebleEstudio.png");
+  background-image: url("../assets/img/gabineteCocina.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -494,7 +546,43 @@ nav.container{
     "image1 image1 descriptions descriptions descriptions image3 image3"
     "image1 image1 descriptions descriptions descriptions image3 image3";
   }
+
 }
+
+/* Banner */
+.banner {
+  width: 90%;
+  max-width: 1600px;
+  margin: 50px auto 10px;
+  padding: 40px 10px 55px 10px;
+  background-color: var(--darkBrown);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.banner__texts {
+  color: #ffff;
+}
+
+.banner__texts h2 {
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 4.2rem;
+}
+
+.banner__description p {
+  margin-top: 10px;
+  width: 90%;
+  font-size: 1.5rem;
+}
+
+.banner__button {
+  display: block;
+  margin-top: 30px;
+}
+
 
 /* Testimonials Sections */
 .testimonials{

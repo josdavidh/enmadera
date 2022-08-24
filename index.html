@@ -8,6 +8,15 @@
     <title>En Madera Carpinteria</title>
 
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+
   </head>
   <body>
     <header class="header">
@@ -57,15 +66,18 @@
           </div>
         </div>
       </section>
+
+      <a class="header__whatsapp" href="#"><i class="fab fa-whatsapp fa-4x"></i></a>
     </header>
 
     <main>
 
-      <section class="services">
-        <div class="services__title">
-          <h2>Nuestros Servicios</h2>
-          <h3>Elaboraci&oacute;n de mobiliarios personalizados</h3>
-        </div>
+      <section class="services">  
+        
+        <img class="services__logo" 
+        src="./assets/icon/enmadera.svg" 
+        alt="Imagen de texto en Madera">
+
         <div class="services__container">
           <article class="services__item">
             <figure>
@@ -133,6 +145,20 @@
         </div>
       </section>
 
+      <section class="banner">
+        <div class="banner__texts">
+          <div class="banner__title">
+            <h2>¿Requieres servicios de carpinter&iacute;a? </h2>
+          </div>
+          <div class="banner__description">
+            <p>Ofrecemos servicios de elaboraci&oacute;n de mobiliarios personalizados. Ponte en contacto con nosotros y cu&eacute;ntanos tus ideas</p>
+          </div>
+        </div>
+        <div class="banner__button">
+          <a class="btn__contact light whatsapp"><span>Hablemos por WhatsApp</span><i class="fab fa-whatsapp fa-2x"></i></a>
+        </div>
+      </section>
+
       <section class="testimonials">
         <div class="testimonials__container">
           <div class="testimonials__quote">
@@ -164,10 +190,11 @@
               <br>Social Media Specialist
             </cite>
           </div>
-          
+
         </div>
       </div>
       </section>
+
     </main>
   </body>
 </html>
