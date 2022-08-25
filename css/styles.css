@@ -300,11 +300,12 @@ nav.container{
 
 .header__main {
   background-color: var(--darkBrown);
-  max-width: 1650px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
 .header__texts {
+  position: relative;
   color: #fff;
   width: 90%;
   margin: 0 auto;
@@ -313,6 +314,8 @@ nav.container{
 }
 
 .header__title h1{
+  position: relative;
+  z-index: 100;
   font-size: 3.2rem;
   letter-spacing: 1px;
 }
@@ -322,6 +325,8 @@ nav.container{
 }
 
 .header__description p{
+  position: relative;
+  z-index: 100;
   font-size: 1.5rem;
   line-height: 1.9rem;
 }
@@ -330,6 +335,36 @@ nav.container{
   position: relative;
   z-index: 1;
   margin-top: 25px;
+}
+
+.header__bg-left {
+  position: absolute;
+  left: -6%;
+  top: 0;
+  z-index: 0;
+  height: 180px;
+  width: 180px;
+  background-image: url("../assets/img/bg-pattern-intro-left-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__bg-right-mobile {
+  position: absolute;
+  right: -6%;
+  bottom: -42%;
+  z-index: 0;
+  height: 330px;
+  width: 124px;
+  background-image: url("../assets/img/bg-pattern-intro-right-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__bg-right-desktop{
+ display: none;
 }
 
 .header__whatsapp {
@@ -357,7 +392,7 @@ nav.container{
     padding: 60px 20px 0 20px;
     justify-content: space-between;
     align-items: flex-start;
-
+    position: relative;
     background-image: linear-gradient(to bottom,
     var(--darkBrown) 70%, #fff 70%);
   }
@@ -372,6 +407,28 @@ nav.container{
 
   .header__texts {
     width: 50%;
+  }
+
+  .header__bg-left {
+    top: 50%;
+    left: -17%;
+    background-image: url("../assets/img/bg-pattern-intro-left-desktop.svg");
+    width: 195px;
+    height: 504px;
+  }
+
+  .header__bg-right-mobile {
+    display: none;
+  }
+
+  .header__bg-right-desktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../assets/img/bg-pattern-intro-right-desktop.svg");
+    width: 436px;
+    height: 593px;
   }
 }
 
@@ -486,6 +543,7 @@ nav.container{
 .about__content {
   grid-area: cta;
   padding: 20px 10px;
+  align-self: center;
 }
 
 .about__title {
@@ -522,6 +580,7 @@ nav.container{
 .about__descriptions {
   grid-area: descriptions;
   padding: 20px 10px;
+  align-self: center;
 }
 
 .about__texts {
@@ -538,6 +597,8 @@ nav.container{
 
 @media(min-width: 768px){
   .about {
+    margin: 50px auto;
+    margin-bottom: 80px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-areas: 
     "image2 image2 image2 image2 cta cta cta"
@@ -547,10 +608,27 @@ nav.container{
     "image1 image1 descriptions descriptions descriptions image3 image3";
   }
 
+  .about__img2 {
+    height: 400px;
+  }
+
+  .about__img1,
+  .about__img3 {
+    height: 320px;
+  }
+
+  .about__content {
+    padding: 20px 25px;
+  }
+
+  .about__descriptions {
+    padding: 20px 40px;
+  }
 }
 
 /* Banner */
 .banner {
+  position: relative;
   width: 90%;
   max-width: 1600px;
   margin: 50px auto 10px;
@@ -562,8 +640,23 @@ nav.container{
   justify-items: center;
 }
 
+.banner__bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  height: 317px;
+  width: 176px;
+  background-image: url("../assets/img/bg-pattern-services-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .banner__texts {
   color: #ffff;
+  position: relative;
+  z-index: 1;
 }
 
 .banner__texts h2 {
@@ -583,6 +676,33 @@ nav.container{
   margin-top: 30px;
 }
 
+.banner__button i {
+  display: none;
+}
+
+@media(min-width: 768px){
+
+  .banner{
+    width: 80%;
+    align-items: start;
+    padding: 40px 60px 40px 80px;
+  }
+
+  .banner__bg{
+    height: 244px;
+    width: 450px;
+    background-image: url("../assets/img/bg-pattern-services-desktop.svg");
+  }
+
+  .banner__button{
+    margin-top: 10px;
+  }
+
+  .banner__button i {
+    display: block;
+  }
+
+}
 
 /* Testimonials Sections */
 .testimonials{
