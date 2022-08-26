@@ -777,3 +777,143 @@ nav.container{
   text-transform: uppercase;
   font-weight: 700;
 }
+
+/* Form section */
+
+.contact {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  justify-items: center;
+  gap: 20px;
+}
+
+.contact__img {
+  width: 300px;
+}
+
+.contact__container {
+  width: 100%;
+}
+
+.contact__form {
+  display: grid;
+  justify-content: center;
+}
+
+.form__group {
+  width: 100%;
+  max-width: 250px;
+  margin: 8px 0;
+}
+
+.form__label {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.form__label--opcional {
+  color: var(--transparentBrown);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-left: 3px;
+}
+
+.form__group--input {
+  position: relative;
+  width: 100%;
+}
+
+.form__input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 0px;
+  border: 1px solid var(--transparentBrown);
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  color: var(--transparentBrown);
+  transition: .3s ease all;
+}
+
+.form__input.select {
+  height: 35px;
+}
+
+.form__textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  color: var(--transparentBrown);
+  resize: none;
+  font-family: "Centra", sans-serif !important;
+  transition: .3s ease all;
+}
+
+.form__input:hover,
+.form__textarea:hover {
+  box-shadow: 5px 1px 8px #1616161c;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  outline: none;
+  box-shadow: 3px 0px 30px #1616161c;
+}
+
+.form__state-validation {
+  position: absolute;
+  top: 36%;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form__error {
+  margin: 5px 0 0 2px;
+  font-size: 1.1rem;
+  color: var(--orange);
+  display: none;
+}
+
+.form__message {
+  text-align: center;
+  font-size: 1.4rem;
+  display: none;
+}
+
+@media(min-width: 768px) {
+
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+    /* align-items: center; */
+    gap: 0;
+  }
+
+  .contact__img {
+    width: 450px;
+  }
+
+  .contact__form {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    /* gap: 5px; */
+  }
+
+
+  #group__content {
+    grid-column: span 2;
+    max-width: unset;
+  }
+
+  #group__validation {
+    grid-column: span 2;
+  }
+}
