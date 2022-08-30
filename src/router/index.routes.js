@@ -10,7 +10,7 @@ const  router = (route) => {
 
 
     body.appendChild(main);
-
+    main.appendChild(pages.projects());
     main.appendChild(pages.header());
     main.appendChild(pages.services());
     main.appendChild(pages.about());

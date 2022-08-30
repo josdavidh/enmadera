@@ -635,6 +635,106 @@ nav.container{
   }
 }
 
+
+/*==========Projects Section=========*/
+
+.projects {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.projects__container{
+  display: grid;
+  grid-template-rows: repeat(6, max-content);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: dense;
+  grid-template-areas: 
+  "category1 category2"
+  "category3 category4"
+  "category5 category6";
+}
+
+#projects__category--1 {
+  grid-area: category1;
+}
+#projects__category--2 {
+  grid-area: category2;
+}
+#projects__category--3 {
+  grid-area: category3;
+}
+#projects__category--4 {
+  grid-area: category4;
+}
+#projects__category--5 {
+  grid-area: category5;
+}
+#projects__category--6 {
+  grid-area: category6;
+}
+
+.projects__element {
+  position: relative;
+  z-index: -1;
+  height: fit-content;
+}
+
+.projects__texts {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+}
+
+.projects__title {
+  font-size: 2rem;
+}
+
+.projects__description {
+  font-size: 1.2rem;
+}
+
+.projects__image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+@media(min-width: 768px) {
+  .projects__container {
+    margin: 40px 60px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas:
+    "category1 category2 category3"
+    "category1 category6 category5"
+    "category4 category6 category5"
+    "category4 category6 category5";
+  }
+
+  .projects__image {
+    height: 300px;
+  }
+
+  #projects__category--1 > .projects__image {
+    height: 500px;
+  }
+
+  #projects__category--4 > .projects__image {
+    height: 500px;
+  }
+
+  #projects__category--5 > .projects__image {
+    height: 300px;
+  }
+
+  #projects__category--6 > .projects__image {
+    height: 300px;
+  }
+}
+
+
+
 /* Banner */
 .banner {
   position: relative;
