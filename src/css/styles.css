@@ -906,6 +906,7 @@ nav.container{
     grid-template-columns: repeat(2, 1fr);
     /* align-items: center; */
     gap: 0;
+    padding: 0 150px;
   }
 
   .contact__img {
@@ -915,6 +916,7 @@ nav.container{
   .contact__form {
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
+    margin: 0 auto;
     /* gap: 5px; */
   }
 
@@ -1021,6 +1023,6 @@ nav.container{
   .footer__map {
     width: 430px;
     height: 300px;
-    grid-column: 3 / 4;
+    /* grid-column: 3 / 4; */
   }
 }
