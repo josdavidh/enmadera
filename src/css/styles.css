@@ -182,8 +182,11 @@ nav.container{
   letter-spacing: 2px;
 }
 
-.btn__contact {
+/*==========button styles=========*/
+
+.btn {
   font-size: 1.8rem;
+  text-align: center;
   position: relative;
   padding: 15px 32px;
   background-color: transparent;
@@ -192,31 +195,51 @@ nav.container{
   cursor: pointer;
 }
 
-.btn__contact.whatsapp{
+.btn.whatsapp{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.btn__contact.whatsapp i {
+.btn.whatsapp i {
   margin-left: 8px;
 }
 
-.btn__contact.dark {
+.btn.dark {
   border: 1px solid #121212;
   color: #121212;
 }
 
-.btn__contact.light {
+.btn.orange {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+
+.btn.brown {
+  border: 1px solid var(--justBrown);
+  color: var(--justBrown);
+}
+
+.btn.middleBrown {
+  border: 1px solid var(--middleBrown);
+  color: var(--middleBrown);
+}
+
+.btn.softBrown {
+  border: 1px solid var(--softBrown);
+  color: var(--softBrown);
+}
+
+.btn.light {
   border: 1px solid #fff;
   color: #fff;
 }
 
-.btn__contact span {
+.btn span {
   z-index: 1;
 }
 
-.btn__contact::before {
+.btn::before {
   content: "";
   width: 0%;
   position: absolute;
@@ -226,24 +249,56 @@ nav.container{
   transition: 0.3s ease-in-out;
 }
 
-.btn__contact.dark::before{
+.btn.dark::before{
   background-color: #121212;
 }
 
-.btn__contact.light::before{
+.btn.orange::before{
+  background-color: var(--orange);
+}
+
+.btn.brown::before{
+  background-color: var(--justBrown);
+}
+
+.btn.middleBrown::before{
+  background-color: var(--middleBrown);
+}
+
+.btn.softBrown::before{
+  background-color: var(--softBrown);
+}
+
+.btn.light::before{
   background-color: #fff;
 }
 
 
-.btn__contact.dark:hover {
+.btn.dark:hover {
   color: #fff;
 }
 
-.btn__contact.light:hover {
+.btn.light:hover {
   color: #121212;
 }
 
-.btn__contact:hover::before {
+.btn.orange:hover {
+  color: #121212;
+}
+
+.btn.brown:hover {
+  color: #121212;
+}
+
+.btn.middleBrown:hover {
+  color: #121212;
+}
+
+.btn.softBrown:hover {
+  color: #121212;
+}
+
+.btn:hover::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -296,17 +351,16 @@ nav.container{
   content: "";
   display: block;
   height: 375px;
-  background-image: url("../assets/img/muebleBar.png");
+  background-image: url("../assets/img/pexels-thijs-van-der-weide-1094770.jpg");
   background-size: cover;
   background-position: center;
-  transition: 4s;
 }
 
 .header__main {
   display: flex;
   flex-direction: column-reverse;
   background-color: var(--darkBrown);
-  max-width: 1700px;
+  max-width: 1750px;
   margin: 0 auto;
   height: auto;
 }
@@ -342,21 +396,45 @@ nav.container{
 
 
 .header__description {
-  margin-top: 8px;
+  margin: 8px 0;
 }
 
 .header__description p{
   position: relative;
   z-index: 100;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 1.9rem;
+}
+
+
+.header__buttons {
+  width: 100%;
+  min-width: 300px;
+  max-width: 368px;
+  margin: 0 0 0 auto;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-auto-rows: 47px;
+  grid-auto-flow: dense;
+  direction: rtl;
+}
+
+.header__buttons a {
+  padding: 8px 3px;
 }
 
 .header__button {
   position: relative;
   z-index: 1;
-  margin-top: 25px;
+  margin-top: 5px;
 }
+
+.header__button--wide {
+ grid-column: span 2;
+
+}
+
 
 .header__bg-left {
   position: absolute;
@@ -409,27 +487,37 @@ nav.container{
 @media (min-width:768px){
 
   .header__main {
-    max-height: 400px;
-    padding: 0 80px;
+    height: 80vh;
+    padding: 0 100px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
     background-image: linear-gradient(to bottom,
     var(--darkBrown) 85%, #fff 85%);
+    gap: 10px;
   }
 
   .header__image{
-    width: 70%;
+    width: 80%;
     min-width: 400px;
-    height: 400px;
+    height: 75vh;
+    margin-top: 20px;
   }
 
   .header__texts {
     padding: 55px 0 0 0;
-    width: 50%;
+    width: 40%;
   }
 
+  .header__texts.right {
+    padding: 45px 0 0 0;
+  }
+
+  .header__buttons{
+    max-width: unset;
+    min-width: unset;
+  }
   .header__bg-left {
     top: 50%;
     left: -17%;
