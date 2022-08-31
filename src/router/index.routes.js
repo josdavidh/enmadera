@@ -11,7 +11,7 @@ const  router = (route) => {
 
     body.appendChild(main);
     main.appendChild(pages.header());
-    // main.appendChild(pages.projects());
+    // // main.appendChild(pages.projects());
     // main.appendChild(pages.services());
     // main.appendChild(pages.about());
     // main.appendChild(pages.banner());

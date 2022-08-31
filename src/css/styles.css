@@ -488,6 +488,7 @@ nav.container{
 
   .header__main {
     height: 80vh;
+    max-height: 580px;
     padding: 0 100px;
     flex-direction: row;
     justify-content: space-between;
@@ -501,17 +502,26 @@ nav.container{
   .header__image{
     width: 80%;
     min-width: 400px;
+    max-width: 800px;
     height: 75vh;
+    max-height: 580px;
     margin-top: 20px;
+    order: -1;
   }
 
   .header__texts {
-    padding: 55px 0 0 0;
     width: 40%;
+    max-width: 280px;
+    max-height: 420px;
+  }
+
+  .header__texts.left {
+    padding: 60px 0 0 30px;
   }
 
   .header__texts.right {
-    padding: 45px 0 0 0;
+    /* padding: 45px 0 0 0; */
+    align-self: center;
   }
 
   .header__buttons{
