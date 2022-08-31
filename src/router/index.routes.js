@@ -10,14 +10,14 @@ const  router = (route) => {
 
 
     body.appendChild(main);
-    main.appendChild(pages.projects());
     main.appendChild(pages.header());
-    main.appendChild(pages.services());
-    main.appendChild(pages.about());
-    main.appendChild(pages.banner());
-    main.appendChild(pages.testimonials());
-    main.appendChild(pages.contact());
-    main.appendChild(pages.footer());
+    // main.appendChild(pages.projects());
+    // main.appendChild(pages.services());
+    // main.appendChild(pages.about());
+    // main.appendChild(pages.banner());
+    // main.appendChild(pages.testimonials());
+    // main.appendChild(pages.contact());
+    // main.appendChild(pages.footer());
 
 
     // switch(route) {

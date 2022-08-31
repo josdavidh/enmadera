@@ -102,7 +102,7 @@ nav.container{
   --state-hamburguer:scale(1); /* default: visible*/
   --state-menu: translate(-100%); /* shows menu*/
 
-  padding: 20px 0;
+  padding: 0;
   display: grid;
   gap: 2px;
   align-items: center;
@@ -256,6 +256,7 @@ nav.container{
   .nav{
       --state-hamburguer:scale(0);
       --state-menu: translate(0);
+      padding: 20px 0;
   }
   
   .nav:target{
@@ -287,17 +288,23 @@ nav.container{
   }
 }
 
-/* Header Main */
-.header__main::before{
+/*===========Header Main============*/
+
+.header__image {
+  position: relative;
+  z-index: 1;
   content: "";
   display: block;
-  height: 370px;
-  background-image: url("../assets/img/closet1.jpg");
+  height: 50vh;
+  background-image: url("../assets/img/muebleBar.png");
   background-size: cover;
   background-position: center;
+  transition: 4s;
 }
 
 .header__main {
+  display: flex;
+  flex-direction: column;
   background-color: var(--darkBrown);
   max-width: 1700px;
   margin: 0 auto;
@@ -316,11 +323,10 @@ nav.container{
   position: relative;
   z-index: 100;
   font-size: 3.2rem;
-  letter-spacing: 1px;
 }
 
 .header__description {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .header__description p{
@@ -387,24 +393,25 @@ nav.container{
 @media (min-width:768px){
 
   .header__main {
-    display: flex;
-    padding: 60px 20px 0 20px;
+    padding: 40px 20px 0 20px;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
     background-image: linear-gradient(to bottom,
-    var(--darkBrown) 70%, #fff 70%);
+    var(--darkBrown) 75%, #fff 75%);
   }
 
-  .header__main::before{
+  .header__image{
     margin-right: 80px;
-    width: 30%;
+    width: 40%;
     min-width: 400px;
-    height: 500px;
+    height: 400px;
     order: 1;
   }
 
   .header__texts {
+    padding: 55px 0 0 0;
     width: 50%;
   }
 
@@ -505,12 +512,12 @@ nav.container{
 
 @media (min-width:768px) {
   .services__logo {
-    left: 23%;
-    transform: translate(0, -80%);
+    position: static;
+    transform: translate(0, 0);
   }
   
   .services__container{
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 
@@ -639,51 +646,41 @@ nav.container{
 /*==========Projects Section=========*/
 
 .projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 1700px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 0 5px;
 }
 
 .projects__container{
+  width: 100%;
+  max-width: 1269px;
   display: grid;
-  grid-template-rows: repeat(6, max-content);
-  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(200px, 300px);
   grid-auto-flow: dense;
-  grid-template-areas: 
-  "category1 category2"
-  "category3 category4"
-  "category5 category6";
 }
 
-#projects__category--1 {
-  grid-area: category1;
-}
-#projects__category--2 {
-  grid-area: category2;
-}
-#projects__category--3 {
-  grid-area: category3;
-}
-#projects__category--4 {
-  grid-area: category4;
-}
-#projects__category--5 {
-  grid-area: category5;
-}
-#projects__category--6 {
-  grid-area: category6;
+#banner__projects{
+  width: 100%;
+  margin: 0;
 }
 
 .projects__element {
-  position: relative;
-  z-index: -1;
-  height: fit-content;
+  background-color: #0eae3e;
+  /* position: relative; */
+  /* z-index: -1; */
 }
 
 .projects__texts {
-  position: absolute;
+  /* position: absolute;
   top: 15px;
-  left: 25px;
+  left: 25px; */
 }
 
 .projects__title {
@@ -695,41 +692,24 @@ nav.container{
 }
 
 .projects__image {
+  /* display: none; */
   object-fit: cover;
   object-position: center;
   width: 100%;
+  height: 100%;
 }
 
 @media(min-width: 768px) {
-  .projects__container {
-    margin: 40px 60px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, max-content);
-    grid-template-areas:
-    "category1 category2 category3"
-    "category1 category6 category5"
-    "category4 category6 category5"
-    "category4 category6 category5";
+  .projects {
+    padding: 0 60px;
   }
 
-  .projects__image {
-    height: 300px;
+  .wide {
+    grid-column: span 2;
   }
 
-  #projects__category--1 > .projects__image {
-    height: 500px;
-  }
-
-  #projects__category--4 > .projects__image {
-    height: 500px;
-  }
-
-  #projects__category--5 > .projects__image {
-    height: 300px;
-  }
-
-  #projects__category--6 > .projects__image {
-    height: 300px;
+  .tall {
+    grid-row: span 2;
   }
 }
 
