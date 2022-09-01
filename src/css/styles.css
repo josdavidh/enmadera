@@ -767,6 +767,25 @@ nav.container{
   max-width: 1700px;
   margin: 20px auto;
   padding: 0 5px;
+  overflow: hidden;
+}
+
+.projects__header {
+  width: 100%;
+  max-width: 1700px;
+  margin: 20px auto;
+}
+
+.projects__header--title h2{
+  font-size: 3.5rem;
+  line-height: 3.7rem;
+  color: var(--darkBrown);
+}
+
+.projects__header--title p{
+  font-size: 2rem;
+  line-height: 2.2rem;
+  color: var(--transparentBrown);
 }
 
 .projects__container{
@@ -794,6 +813,7 @@ nav.container{
   /* position: absolute;
   top: 15px;
   left: 25px; */
+  display: none;
 }
 
 .projects__title {
@@ -812,9 +832,48 @@ nav.container{
   height: 100%;
 }
 
+.projects__modal {
+  transform: scale(0);
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 1000;
+  transition: .3s ease-in-out;
+}
+
+
+.projects__modal.show {
+  transform: scale(1);
+}
+
+.projects__modal.hide {
+  transform: scale(0);
+}
+
+.modal__close {
+  object-fit: cover;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  top: 30px;
+  right: 35px;
+  cursor: pointer;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
 @media(min-width: 768px) {
   .projects {
-    padding: 0 60px;
+    padding: 0 100px;
+  }
+
+  .projects__container {
+    gap: 20px;
   }
 
   .wide {

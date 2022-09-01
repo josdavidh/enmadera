@@ -1,4 +1,5 @@
 import {pages} from "../controllers/index.js";
+import {utils} from "../utils/index.js";
 
 const  router = (route) => {
 
@@ -10,8 +11,9 @@ const  router = (route) => {
 
 
     body.appendChild(main);
-    main.appendChild(pages.header());
-    // // main.appendChild(pages.projects());
+    // main.appendChild(pages.header());
+    main.appendChild(pages.projects());
+    utils.showProjects();
     // main.appendChild(pages.services());
     // main.appendChild(pages.about());
     // main.appendChild(pages.banner());
