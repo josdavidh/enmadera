@@ -759,52 +759,64 @@ nav.container{
 /*==========Projects Section=========*/
 
 .projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   max-width: 1700px;
-  margin: 20px auto;
-  padding: 0 5px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .projects__header {
   width: 100%;
-  max-width: 1700px;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 0 10px;
+  min-height: 400px;
+  max-height: 420px;
+  background-image: linear-gradient(to bottom,
+  var(--darkBrown) 85%, #fff 85%);
+}
+
+.projects__header--title{
+  text-align: right;
+  padding: 10px 5px;
 }
 
 .projects__header--title h2{
-  font-size: 3.5rem;
-  line-height: 3.7rem;
-  color: var(--darkBrown);
+  font-size: 4rem;
+  line-height: 4.2rem;
+  color: #fff;
 }
 
-.projects__header--title p{
-  font-size: 2rem;
-  line-height: 2.2rem;
-  color: var(--transparentBrown);
+.projects__header--title p {
+  margin-left: auto;
+  margin-top: 8px;
+  max-width: 550px;
+  font-size: 1.7rem;
+  line-height: 1.9rem;
+  color: #fff;
+}
+
+.projects__header--button {
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .projects__container{
   width: 100%;
-  max-width: 1269px;
   display: grid;
   gap: 5px;
+  padding: 0 10px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: minmax(200px, 300px);
-  grid-auto-flow: dense;
 }
 
-#banner__projects{
+/* #banner__projects{
   width: 100%;
   margin: 0;
-}
+} */
 
 .projects__element {
   background-color: #0eae3e;
+  height: 100%;
   /* position: relative; */
   /* z-index: -1; */
 }
@@ -869,20 +881,60 @@ nav.container{
 
 @media(min-width: 768px) {
   .projects {
-    padding: 0 100px;
+    padding: 0;
+    position: relative;
+  }
+
+  .projects__header {
+    position: absolute;
+  }
+
+  .projects__header--title {
+    padding: 60px 9% 0 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .projects__header--title p {
+    width: 40%;
   }
 
   .projects__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1650px;
+    height: 1200px;
     gap: 20px;
+    padding: 0 70px;
+    margin-top: 40px;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-template-rows: repeat(4, minmax(200px, 1fr));
+    grid-template-areas: 
+    "project1 project1 empty empty"
+    "project1 project1 project2 project3"
+    "project4 project4 project6 project6"
+    "project5 project5 project6 project6";
   }
 
-  .wide {
-    grid-column: span 2;
+  .project1 {
+    grid-area: project1;
+  }
+  .project2 {
+    grid-area: project2;
+  }
+  .project3 {
+    grid-area: project3;
+  }
+  .project4 {
+    grid-area: project4;
+  }
+  .project5 {
+    grid-area: project5;
+  }
+  .project6 {
+    grid-area: project6;
   }
 
-  .tall {
-    grid-row: span 2;
-  }
 }
 
 
