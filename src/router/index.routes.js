@@ -12,12 +12,12 @@ const  router = (route) => {
 
     body.appendChild(main);
     // main.appendChild(pages.header());
-    // main.appendChild(pages.projects());
-    // utils.showProjects();
-    // main.appendChild(pages.services());
+    main.appendChild(pages.projects());
+    utils.showProjects();
+    main.appendChild(pages.services());
     main.appendChild(pages.about());
-    // main.appendChild(pages.banner());
-    // main.appendChild(pages.testimonials());
+    main.appendChild(pages.banner());
+    main.appendChild(pages.testimonials());
     // main.appendChild(pages.contact());
     main.appendChild(pages.footer());
 

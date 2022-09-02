@@ -552,25 +552,12 @@ nav.container{
 }
 
 
-/* Servicios */
+/*========Services section======*/
 .services{
   display: grid;
   justify-content: center;
   position: relative;
   max-width: 1700px;
-  margin: 0 auto;
-}
-
-
-.services__logo {
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 10%);
-  width: 320px;
-  height: 148px;
-  object-fit: cover;
-  object-position: center;
   margin: 0 auto;
 }
 
@@ -596,11 +583,10 @@ nav.container{
   max-width: 320px;
   flex-direction: column;
   align-items: center;
-  margin: 20px 25px;
+  margin: 10px 15px;
 }
 
 .services__item img {
-  margin-left: 5px;
 }
 
 .services__texts {
@@ -609,7 +595,6 @@ nav.container{
 
 .services__item h4,
 .services__item p {
-  margin-left: 10px;
   width: 100%;
 }
 
@@ -624,17 +609,16 @@ nav.container{
 }
 
 @media (min-width:768px) {
-  .services__logo {
-    position: static;
-    transform: translate(0, 0);
+  .services{
+    margin: 80px auto;
   }
-  
   .services__container{
     margin-top: 0;
   }
 }
 
-/* About Section */
+/*===========About Section===========*/
+
 .about {
   display: grid;
   max-width: 1700px;
@@ -680,7 +664,7 @@ nav.container{
 .about__paragraph {
   color: var(--transparentBrown);
   padding: 5px 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 1.9rem;
 }
 
@@ -729,7 +713,7 @@ nav.container{
 
   .about__img2 {
     height: 400px;
-    margin: 0 0 0 70px;
+    margin: 0 20px 0 70px;
   }
 
   .about__img1{
