@@ -22,9 +22,9 @@ module.exports = {
             // {
             //     test: /\.(png|jpg|gif|svg)$/,
             //     loader: "file-loader",
-            //     options: {
-            //         name: "../ img / [name]. [ext]? [hash]" //../img es la ubicación de almacenamiento del archivo, name es el nombre del archivo
-            //     },
+            //     // options: {
+            //     //     name: "../ img / [name]. [ext]? [hash]" //../img es la ubicación de almacenamiento del archivo, name es el nombre del archivo
+            //     // },
             // }
         ]
     },
