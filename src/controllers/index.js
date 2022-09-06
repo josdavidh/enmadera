@@ -6,6 +6,7 @@ import About from "./about.controller.js"
 import Banner from "./banner.controller.js"
 import Testimonials from "./testimonials.controller.js"
 import Contact from "./contact.controller.js"
+import Questions from "./questions.controller.js"
 import Footer from "./footer.controller.js"
 
 
@@ -17,6 +18,7 @@ const pages = {
     banner: Banner,
     testimonials: Testimonials,
     contact: Contact,
+    questions: Questions,
     footer: Footer,
     projects: Projects,
 

@@ -6,6 +6,8 @@ import {router} from "./router/index.routes.js"
 
 AOS.init();
 
+
+
 window.addEventListener("load", router(window.location.hash));
 
 window.addEventListener("hashchange", () => {

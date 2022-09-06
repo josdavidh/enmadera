@@ -109,7 +109,7 @@ nav.container{
   grid-template-columns: repeat(2, 1fr);
 }
 
-.nav:target{
+.nav.show{
   --state-menu: translate(0); /* hide menu*/
   --state-close: scale(1); /* shows nav__close*/
   --state-hamburguer:scale(0); /* hide nav__hamburger*/
@@ -121,11 +121,13 @@ nav.container{
   height: 90px;
   object-position: center;
   object-fit: cover;
-  z-index: 1;
+  z-index: 201;
 }
 
 .nav__hamburguer, 
 .nav__close{
+  position: relative;
+  z-index: 201;
   cursor: pointer;
   grid-column: -2/-1;
   grid-row: 1/2;
@@ -146,14 +148,15 @@ nav.container{
 }
 
 .nav__links{
-  background-color: #3333;
+  background-color: #e6e6e6;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 0;
-
+  height: 100vh;
+  z-index: 200;
   display: grid;
   align-content: center;
   gap: 2em;
@@ -180,6 +183,42 @@ nav.container{
   text-decoration: none;
   font-size: 1.6rem;
   letter-spacing: 2px;
+}
+
+@media (min-width:768px) {
+  .nav{
+      --state-hamburguer:scale(0);
+      --state-menu: translate(0);
+      padding: 20px 0;
+  }
+  
+  .nav:target{
+      --state-close: scale(0);
+  }
+
+  .nav__links{
+      padding: 0;
+      background-color: unset;
+      position: unset;
+      gap: 1.5em;
+      grid-auto-flow: column;
+      height: unset;
+      transform: unset;
+
+      grid-column: -2/-1;
+      grid-row: 1/2;
+  }
+
+  .nav__link{
+      font-size: 1.6rem;
+      letter-spacing: none;
+  }
+
+  .nav__item--button {
+    position: unset;
+    margin-left: 18px;
+
+  }
 }
 
 /*==========button styles=========*/
@@ -304,44 +343,6 @@ nav.container{
   height: 100%;
 }
 
-
-
-
-@media (min-width:768px) {
-  .nav{
-      --state-hamburguer:scale(0);
-      --state-menu: translate(0);
-      padding: 20px 0;
-  }
-  
-  .nav:target{
-      --state-close: scale(0);
-  }
-
-  .nav__links{
-      padding: 0;
-      background-color: unset;
-      position: unset;
-      gap: 1.5em;
-      grid-auto-flow: column;
-  
-      transform: unset;
-
-      grid-column: -2/-1;
-      grid-row: 1/2;
-  }
-
-  .nav__link{
-      font-size: 1.6rem;
-      letter-spacing: none;
-  }
-
-  .nav__item--button {
-    position: unset;
-    margin-left: 18px;
-
-  }
-}
 
 /*===========Header Main============*/
 
