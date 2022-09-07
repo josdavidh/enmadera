@@ -1,85 +1,120 @@
 <section class="contact" id="contact">
-    <!-- <img class="contact__img" src="./assets/img/undraw-contact.svg" alt="Imagen de contacto"> -->
-
-    <div class="contact__container">
-      <form class="contact__form" id="contact__form">
-
-       <!-- Nombre usuario -->
-        <div class="form__group" id="group__user">
-          <label for="user" class="form__label">Nombre</label>
-          <div class="form__group--input">
-            <input type="text" class="form__input" name="user" id="user" placeholder="Tu nombre" />
-            <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
-            <p class="form__error">
-              El nombre debe ser m&aacuteximo de 40 letras sin s&iacutembolos.
-            </p>
-          </div>
-        </div>
-
-       <!-- Tipo de servicio -->
-        <div class="form__group" id="group__service">
-          <label for="service" class="form__label">Tipo de servicio<span class="form__label--opcional">(opcional)</span></label>
-          <div class="form__group--input">
-            <select class="form__input select" name="service" id="service"> 
-              <option value="Construcción de mobiliario">Construcci&oacute;n de mobiliario</option>
-              <option value="Construcción de Stand">Construcci&oacute;n de Stand</option>
-              <option value="Reparación y renovación">Reparaci&oacute;n y renovaci&oacute;n</option>
-            </select>
-          </div>
-        </div>
-
-       <!-- Correo usuario -->
-        <div class="form__group" id="group__email">
-          <label for="email" class="form__label">Correo</label>
-          <div class="form__group--input">
-            <input type="text" class="form__input" name="email" id="email" placeholder="Tu correo" />
-            <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
-            <p class="form__error">
-              Debes escribir un correo valido.
-            </p>
-          </div>
-        </div>
-
-       <!-- Telefono usuario -->
-        <div class="form__group" id="group__phone">
-          <label for="phone" class="form__label">Tel&eacute;fono</label>
-          <div class="form__group--input">
-            <input type="tel" class="form__input" name="group__phone" id="phone" placeholder="Tu tel&eacute;fono" />
-            <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
-            <p class="form__error">
-              Debes escribir un tel&eacute;fono valido.
-            </p>
-          </div>
-        </div>
-
-        <!-- Contenido Usuario -->
-        <div class="form__group" id="group__content">
-          <label for="content" class="form__label">Descripci&oacute;n</label>
-          <div class="form__group--input">
-           <textarea class="form__textarea" name="content" id="content" cols="30" rows="10"></textarea>
-           <p class="form__error">
-              Debe escribir un contenido con m&aacuteximo 300 caracteres.
-           </p>
-          </div>
-        </div>
-        
-        <!-- Validacion del correo -->
-        <div class="form__group" id="group__validation">
-          <p class="form__message">
-            <span><i class="fa fa-exclamation" aria-hidden="true"></i></span>
-            Enviado existosamente
-          </p>
-        </div>
-
-        <div class="form__group">
-          <button type="submit" class="form__submit btn__contact dark" value="send" id="form__btn">Enviar</button>
-        </div>
-      </form>
-
-
+  <div class="contact__title">
+    <h2>Contacto</h2>
+    <p>¿En qu&eacute; podemos ayudarte? D&eacute;janos tus datos y cuéntanos lo que necesitas, en el transcurso de los d&iacute;as nos pondremos en contacto contigo.</p>
+  </div>
+  <form class="contact__form" id="contact__form">
+    <!-- Nombre usuario -->
+    <div class="form__group" id="group__user">
+      <input
+        type="text"
+        class="form__input"
+        name="user"
+        id="user"
+        placeholder="Nombre"
+      />
+      <label for="user" class="form__label">Nombre</label>
+      <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
+      <p class="form__error">
+        El nombre debe ser m&aacuteximo de 40 letras sin s&iacutembolos.
+      </p>
     </div>
 
-    <div class="footer__map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.109168629941!2d-75.59783118255615!3d6.249343200000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290a9dce4105%3A0x9d17618d7ed47119!2sCl.%2043%20%2376-16%2C%20Medell%C3%ADn%2C%20Laureles%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1661549642113!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Tipo de servicio -->
+    <div class="form__group" id="group__service">
+      <label for="service" class="form__label select"
+        >Tipo de servicio<span class="form__label--opcional"
+          >(opcional)</span
+        ></label
+      >
+      <select class="form__input select" name="service" id="service">
+        <option value="Construcción de mobiliario">
+          Construcci&oacute;n de mobiliario
+        </option>
+        <option value="Construcción de Stand">
+          Construcci&oacute;n de Stand
+        </option>
+        <option value="Reparación y renovación">
+          Reparaci&oacute;n y renovaci&oacute;n
+        </option>
+      </select>
     </div>
+
+    <!-- Correo usuario -->
+    <div class="form__group" id="group__email">
+      <input
+        type="text"
+        class="form__input"
+        name="email"
+        id="email"
+        placeholder="Correo"
+      />
+      <label for="email" class="form__label">Correo</label>
+      <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
+      <p class="form__error">Debes escribir un correo valido.</p>
+    </div>
+
+    <!-- Telefono usuario -->
+    <div class="form__group" id="group__phone">
+      <input
+        type="tel"
+        class="form__input"
+        name="group__phone"
+        id="phone"
+        placeholder="Tel&eacute;fono"
+      />
+      <label for="phone" class="form__label">Tel&eacute;fono</label>
+      <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
+      <p class="form__error">Debes escribir un tel&eacute;fono valido.</p>
+    </div>
+
+    <!-- Contenido Usuario -->
+    <div class="form__group" id="group__content">
+      <textarea
+        class="form__textarea"
+        name="content"
+        placeholder="Descripción"
+        id="content"
+        cols="30"
+        rows="4"
+      ></textarea>
+      <label for="content" class="form__label content"
+      >Descripci&oacute;n</label
+    >
+      <p class="form__error">
+        Debe escribir un contenido con m&aacuteximo 300 caracteres.
+      </p>
+    </div>
+
+    <!-- Validacion del correo -->
+    <div class="form__group" id="group__validation">
+      <p class="form__message">
+        <span><i class="fa fa-exclamation" aria-hidden="true"></i></span>
+        Enviado existosamente
+      </p>
+    </div>
+
+    <div class="form__group">
+      <button
+        type="submit"
+        class="form__submit btn dark"
+        value="send"
+        id="form__btn"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+
+  <div class="contact__map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.109168629941!2d-75.59783118255615!3d6.249343200000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290a9dce4105%3A0x9d17618d7ed47119!2sCl.%2043%20%2376-16%2C%20Medell%C3%ADn%2C%20Laureles%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1661549642113!5m2!1ses!2sco"
+      width="100%"
+      height="100%"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
 </section>
