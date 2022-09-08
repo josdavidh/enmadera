@@ -1,29 +1,29 @@
-const closet1 = "../assets/img/closet1.jpg";
-const closet2 = "../assets/img/closet2.jpg";
-const closet3 = "../assets/img/closet3.jpg";
-const closet4 = "../assets/img/closet4.jpg";
-const closet5 = "../assets/img/closet5.jpg";
+import closet1 from "../assets/img/closet1.jpg";
+import closet2 from "../assets/img/closet2.jpg";
+import closet3 from "../assets/img/closet3.jpg";
+import closet4 from "../assets/img/closet4.jpg";
+import closet5 from "../assets/img/closet5.jpg";
 
-const separador1 = "../assets/img/separador1.jpg";
-const separador2 = "../assets/img/separador2.jpg";
+import separador1 from "../assets/img/separador1.jpg";
+import separador2 from "../assets/img/separador2.jpg";
 
-const gabineteCocina = "../assets/img/gabineteCocina.jpg";
-const muebleBano1 = "../assets/img/muebleBano1.jpg";
-const muebleBano2 = "../assets/img/muebleBano2.jpg";
+import gabineteCocina from "../assets/img/gabineteCocina.jpg";
+import muebleBano1 from "../assets/img/muebleBano1.jpg";
+import muebleBano2 from "../assets/img/muebleBano2.jpg";
 
-const muebleEstudio = "../assets/img/muebleEstudio.png";
-const repisaDecorativa = "../assets/img/repisaDecorativa.png";
-const muebleBar = "../assets/img/muebleBar.png";
-const muebleExhibidor = "../assets/img/muebleExhibidor.png";
-const mesaCircular1 = "../assets/img/mesaCircular1.png";
-const mesaCircular2 = "../assets/img/mesaCircular2.png";
+import muebleEstudio from "../assets/img/muebleEstudio.png";
+import repisaDecorativa from "../assets/img/repisaDecorativa.png";
+import muebleBar from "../assets/img/muebleBar.png";
+import muebleExhibidor from "../assets/img/muebleExhibidor.png";
+import mesaCircular1 from "../assets/img/mesaCircular1.png";
+import mesaCircular2 from "../assets/img/mesaCircular2.png";
 
-const biblioteca = "../assets/img/biblioteca.png";
-const exhibidorAlmacen = "../assets/img/exhibidorAlmacen.png";
-const recepcion1 = "../assets/img/recepcion1.jpg";
-const recepcion2 = "../assets/img/recepcion2.jpg";
-const recibidor1 = "../assets/img/recibidor1.jpg";
-const recibidor2 = "../assets/img/recibidor2.jpg";
+import biblioteca from "../assets/img/biblioteca.png";
+import exhibidorAlmacen from "../assets/img/exhibidorAlmacen.png";
+import recepcion1 from "../assets/img/recepcion1.jpg";
+import recepcion2 from "../assets/img/recepcion2.jpg";
+import recibidor1 from "../assets/img/recibidor1.jpg";
+import recibidor2 from "../assets/img/recibidor2.jpg";
 
 export const projectsImg = [
   {

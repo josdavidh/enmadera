@@ -587,8 +587,6 @@ nav.container{
   margin: 10px 15px;
 }
 
-.services__item img {
-}
 
 .services__texts {
   text-align: center;
@@ -794,10 +792,6 @@ nav.container{
   grid-auto-rows: minmax(200px, 300px);
 }
 
-/* #banner__projects{
-  width: 100%;
-  margin: 0;
-} */
 
 .projects__element {
   background-color: #0eae3e;
@@ -841,7 +835,6 @@ nav.container{
 }
 
 .projects__image {
-  /* display: none; */
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -867,10 +860,12 @@ nav.container{
   position: fixed;
   top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, .8);
-  z-index: 10;
+  z-index: 200;
   transition: .3s ease-in-out;
 }
 
@@ -893,31 +888,73 @@ nav.container{
   cursor: pointer;
 }
 
-.swiper {
+.modal__content {
   position: fixed;
   top: 50%;
-  transform: translate(0,-50%);
-  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 90%;
   height: 80vh;
-
 }
 
-.swiper-slide {
+.modal__slides {
   background-color: #e3964b;
-}
-
-.swiper__img {
-  object-fit: cover;
-  width: 100%;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
   height: 100%;
 }
 
-.prev,
-.next {
+.modal__indicators {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  font-size: 1.5rem;
   color: #fff;
-  font-size: 5rem;
+  background-color: #12121269;
 }
+
+
+
+.modal__img {
+  /* position: relative;
+  top: 50%;
+  transform: translate(0, -50%); */
+  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+
+.modal__navigation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #121212c4;
+  padding: 0 3px;
+  display: flex;
+
+}
+
+.modal__prev,
+.modal__next {
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+
+.modal__caption p {
+  color: #fff;
+  font-size: 2rem;
+}
+
 
 @media(min-width: 768px) {
   .projects {
@@ -983,10 +1020,10 @@ nav.container{
     right: 35px;
   }
 
-  .swiper {
-    width: 500px;
+  .modal__content {
     max-width: 800px;
-    height: 90vh;
+    height: 95vh;
+    max-height: 610px;
   }
 }
 
@@ -1352,23 +1389,6 @@ nav.container{
   #group__content {
     grid-column: span 2;
   }
-  /* .contact {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 0;
-    padding: 0 100px;
-  }
-
-
-
-  #group__content {
-    grid-column: span 2;
-    max-width: unset;
-  }
-
-  #group__validation {
-    grid-column: span 2;
-  } */
 
   .contact__map {
     grid-row: 2/3;

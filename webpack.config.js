@@ -19,13 +19,14 @@ module.exports = {
                 test: /\.html$/i,
                 use: "html-loader",
             },
-            // {
-            //     test: /\.(png|jpg|gif|svg)$/,
-            //     loader: "file-loader",
-            //     // options: {
-            //     //     name: "../ img / [name]. [ext]? [hash]" //../img es la ubicación de almacenamiento del archivo, name es el nombre del archivo
-            //     // },
-            // }
+            {
+                test: /\.(png|jpg)$/,
+                type: "asset/resource",
+                // loader: "file-loader",
+                // options: {
+                //     name: "../ img / [name]. [ext]? [hash]" //../img es la ubicación de almacenamiento del archivo, name es el nombre del archivo
+                // },
+            }
         ]
     },
     plugins: [
