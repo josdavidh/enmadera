@@ -28,6 +28,7 @@ html {
 
 body {
   font-family: "Centra", sans-serif !important;
+  overflow-x: hidden;
 }
 
 :root {
@@ -101,7 +102,6 @@ nav.container{
   --state-close: scale(0); /* default: hidden*/
   --state-hamburguer:scale(1); /* default: visible*/
   --state-menu: translate(-100%); /* shows menu*/
-
   padding: 0;
   display: grid;
   gap: 2px;
@@ -116,12 +116,13 @@ nav.container{
 }
 
 .nav__logo{
+  position: relative;
   width: 30vmax;
   max-width: 350px;
   height: 90px;
   object-position: center;
   object-fit: cover;
-  z-index: 201;
+  z-index: 300;
 }
 
 .nav__hamburguer, 
@@ -149,7 +150,7 @@ nav.container{
 
 .nav__links{
   background-color: #e6e6e6;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -554,6 +555,8 @@ nav.container{
   position: relative;
   max-width: 1700px;
   margin: 0 auto;
+  padding-bottom: 35px;
+  overflow: hidden;
 }
 
 
@@ -573,7 +576,7 @@ nav.container{
 .services::after {
   content: "";
   position: absolute;
-  bottom: -40px;
+  bottom: 0;
   right: 0;
   height: 100px;
   width: 100px;
@@ -671,7 +674,6 @@ nav.container{
   display: grid;
   max-width: 1700px;
   margin: 0 auto;
-  margin-top: 40px;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, max-content);
   grid-template-areas: 

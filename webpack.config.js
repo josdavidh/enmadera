@@ -1,7 +1,7 @@
 const HtmlWepackPlugin = require ("html-webpack-plugin")
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: {
         entry: "./src/main.js"
     },

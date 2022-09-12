@@ -1,4 +1,5 @@
 export default () => {
+    const body = document.querySelector("body");
     const navHamburgerBtn = document.querySelector(".nav__hamburguer");
     const navCloseBtn = document.querySelector(".nav__close");
 
@@ -8,9 +9,11 @@ export default () => {
 
     navHamburgerBtn.addEventListener("click", () => {
         nav.classList.toggle("show")
+        body.style.overflowY = "hidden";
     })
 
     navCloseBtn.addEventListener("click", () => {
         nav.classList.toggle("show")
+        body.style.overflowY = "auto";
     })
 }
