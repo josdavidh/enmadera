@@ -38,6 +38,7 @@ const router = (route) => {
         break;
     default:
         main.appendChild(pages.header());
+        utils.showHeaders();
         main.appendChild(pages.services());
         main.appendChild(pages.about());
         main.appendChild(pages.banner());

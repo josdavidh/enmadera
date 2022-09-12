@@ -37,12 +37,6 @@ export default () => {
   }
 
 
-  const modalNavigation = `
-    <div class="modal__navigation">
-      <a class="modal__prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
-      <a class="modal__next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
-    </div>
-  `;
 
   const plusSlides = (n) => {
     showSlides(slideIndex +=n)
