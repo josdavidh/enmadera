@@ -122,7 +122,7 @@ nav.container{
   height: 90px;
   object-position: center;
   object-fit: cover;
-  z-index: 300;
+  z-index: 201;
 }
 
 .nav__hamburguer, 
@@ -638,6 +638,7 @@ nav.container{
 @media (min-width:768px) {
   .services{
     margin: 80px auto;
+    overflow: unset;
   }
   .services__container{
     margin-top: 0;
@@ -891,7 +892,7 @@ nav.container{
   display: block;
   width: 100%;
   height: 100%;
-  background: var(--darkBeige);
+  background: var(--darkBrown);
   opacity: 0;
   z-index: 2;
   transition: 0.5s;
@@ -922,6 +923,17 @@ nav.container{
   height: 100%;
 }
 
+.projects__eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: var(--transparentBrown);
+  opacity: .3;
+}
+
+
 
 .projects__element:hover {
   transform: translateY(-1%);
@@ -937,6 +949,9 @@ nav.container{
 }
 
 .projects__modal {
+  display: grid;
+  align-items: center;
+  justify-items: center;
   transform: scale(0);
   position: fixed;
   top: 0;
@@ -946,7 +961,7 @@ nav.container{
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.808);
-  z-index: 200;
+  z-index: 202;
   transition: .3s ease-in-out;
 }
 
@@ -971,27 +986,25 @@ nav.container{
 
 .modal__content {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  display: grid;
+  align-items: center;
   width: 90%;
-  height: 80vh;
+  height: 80%;
 }
 
 .modal__slides {
-  background-color: #e3964b;
+  background-color: #12121253;
   position: relative;
   width: fit-content;
   margin: 0 auto;
-  height: 100%;
-  animation: fadeIn 5s ease-in-out;
-  /* animation: fade 1.5s ease; */
+  height: fit-content;
+  max-height: 100%;
+  animation: fade 5s ease-in-out;
 }
 
-@keyframes fadeIn {
+@keyframes fade {
   0% {
     opacity: 0;
-    /* filter: blur(20px); */
   }
   10% {
     opacity: 1;
@@ -999,18 +1012,10 @@ nav.container{
   }
 }
 
-@keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 
 .modal__indicators {
   position: absolute;
+  z-index: 10;
   top: 2px;
   left: 3px;
   width: fit-content;
@@ -1025,8 +1030,6 @@ nav.container{
 
 .modal__img {
   position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
   object-fit: cover;
   width: auto;
   max-width: 100%;
@@ -1037,6 +1040,7 @@ nav.container{
 
 .modal__navigation {
   position: absolute;
+  z-index: 10;
   bottom: 0;
   right: 0;
   background-color: #121212c4;
@@ -1123,6 +1127,10 @@ nav.container{
     grid-area: project6;
   }
 
+  .projects__eye {
+    display: none;
+  }
+
   .modal__close {
     width: 64px;
     height: 64px;
@@ -1132,14 +1140,13 @@ nav.container{
 
   .modal__content {
     max-width: 800px;
-    height: 95vh;
+    height: 95%;
     max-height: 610px;
   }
 
-  .modal__img {
-    position: unset;
-    top: unset;
-    transform: unset;
+  .modal__slides {
+    height: 100%;
+    min-height: 430px
   }
 }
 
