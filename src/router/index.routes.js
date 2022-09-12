@@ -21,6 +21,7 @@ const router = (route) => {
     case "#proyectos":
         main.appendChild(pages.projects());
         utils.showProjects();
+        main.appendChild(pages.banner());
         main.appendChild(pages.footer());
         break;
     case "#testimonios":
@@ -41,7 +42,6 @@ const router = (route) => {
         main.appendChild(pages.about());
         main.appendChild(pages.banner());
         main.appendChild(pages.testimonials());
-        main.appendChild(pages.contact());
         main.appendChild(pages.footer());
         break;
   }

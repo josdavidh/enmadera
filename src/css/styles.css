@@ -1195,9 +1195,37 @@ nav.container{
 
 /* Testimonials Sections */
 .testimonials{
+  position: relative;
   margin-bottom: 100px;
   max-width: 1700px;
   margin: 0 auto;
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 250px;
+  background-image: url("../assets/img/bg-intro-right-mobile-copy.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testimonials::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 250px;
+  transform: rotate(180deg);
+  background-image: url("../assets/img/bg-intro-right-mobile-copy.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .testimonials__container {
@@ -1267,6 +1295,22 @@ nav.container{
   font-weight: 700;
 }
 
+@media (min-width:768px) {
+  .testimonials::before {
+    top: -150px;
+    width: 195px;
+    height: 504px;
+    background-image: url("../assets/img/bg-intro-left-desktop.svg");
+  }
+  
+  .testimonials::after {
+    top: 200px;
+    width: 195px;
+    height: 504px;
+    transform: unset;
+    background-image: url("../assets/img/bg-intro-left-desktop-copy.svg");
+  }
+}
 /*==============Form section==============*/
 
 .contact {
@@ -1287,24 +1331,25 @@ nav.container{
   background-color: var(--darkBrown);
 }
 
-.contact__title::after {
+.contact__title::before {
   content: "";
-  width: 176px;
-  height: 317px;
+  width: 120px;
+  height: 220px;
   position: absolute;
   top: 0;
   right: 0;
+
   background-image: url("../assets/img/bg-services-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
 .contact__title h2,
 .contact__title p {
+  text-align: left;
   position: relative;
-  z-index: 100;
+  z-index: 10;
   color: #ffff;
 }
 
@@ -1314,8 +1359,9 @@ nav.container{
 }
 
 .contact__title p {
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
+  margin-right: auto;
+  max-width: 500px;
   margin-top: 5px;
   font-size: 1.7rem;
   line-height: 1.9rem;
@@ -1448,9 +1494,16 @@ nav.container{
 @media(min-width: 768px) {
 
   .contact__title {
-    padding: 40px 0 40px 80px;
+    padding: 40px 0 40px 100px;
     grid-column: span 2;
 
+  }
+
+  .contact__title::before {
+    content: "";
+    width: 336px;
+    height: 553px;
+    /* background-image: url("../assets/img/bg-intro-right-desktop-v2-copy.svg"); */
   }
 
   .contact {
@@ -1476,6 +1529,8 @@ nav.container{
   }
 
   .contact__map {
+    position: relative;
+    z-index: 10;
     grid-row: 2/3;
     grid-column: 1/2;
     margin-left: auto;
