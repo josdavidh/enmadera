@@ -76,6 +76,12 @@ export default () => {
       arrowRight.className = "modal__next";
       img.className = "modal__img";
 
+      slide.classList.add("skeleton-loading-modal");
+
+      img.addEventListener("load", () => {
+        slide.classList.remove("skeleton-loading-modal");
+      })
+
       modalNavigation.appendChild(arrowLeft);
       modalNavigation.appendChild(arrowRight);
       modalIndicators.textContent = current+" / "+length;
