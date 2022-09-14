@@ -1512,7 +1512,6 @@ nav.container{
   padding-bottom: 6px;
   font-weight: 500;
   border-width: 3px;
-  border-image: linear-gradient(to right, var(--justBrown), var(--justBrown)); 
   border-image-slice: 1;
 }
 
@@ -1523,18 +1522,47 @@ nav.container{
   display: block;
   transition: 0.2s;
   font-size: 1.7rem;
-  color: var(--justBrown);
   font-weight: 700;
 }
 
 
+.form__input.incorrect {
+  border-bottom: 2px solid var(--orange);
+  color: var(--orange);
+}
+
+.form__input.correct {
+  border-bottom: 2px solid #0dc042;
+}
+
+.form__textarea.incorrect {
+  border-bottom: 2px solid var(--orange);
+  color: var(--orange);
+}
+
+.form__textarea.correct {
+  border-bottom: 2px solid #0dc042;
+}
+
 .form__state-validation {
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 10px;
   font-size: 1.3rem;
   visibility: hidden;
 }
+
+.form__input.incorrect ~ .form__state-validation {
+  color: var(--orange);
+  visibility: visible;
+}
+
+.form__input.correct ~ .form__state-validation {
+  color: #0dc042;
+  visibility: visible;
+}
+
+
 
 .form__error {
   margin: 5px 0 0 2px;
@@ -1549,7 +1577,7 @@ nav.container{
   font-size: 1.4rem;
 }
 
-#group__validation {
+#form__validation {
   display: none;
 }
 
@@ -1599,6 +1627,13 @@ nav.container{
 
   #group__content {
     grid-column: span 2;
+  }
+
+  #form__validation {
+    width: fit-content;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
   }
 
   .contact__map {

@@ -5,7 +5,6 @@ export default () => {
 
     const nav = document.querySelector(".nav")
 
-    console.log(nav)
 
     navHamburgerBtn.addEventListener("click", () => {
         nav.classList.toggle("show")

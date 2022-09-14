@@ -34,6 +34,7 @@ const router = (route) => {
         break;
     case "#contacto":
         main.appendChild(pages.contact());
+        utils.form();
         main.appendChild(pages.banner());
         main.appendChild(pages.footer());
         break;

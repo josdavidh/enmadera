@@ -14,7 +14,7 @@
         placeholder="Nombre"
       />
       <label for="user" class="form__label">Nombre</label>
-      <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
+      <i class="form__state-validation fa" aria-hidden="true"></i>
       <p class="form__error">
         El nombre debe ser m&aacuteximo de 40 letras sin s&iacutembolos.
       </p>
@@ -50,7 +50,7 @@
         placeholder="Correo"
       />
       <label for="email" class="form__label">Correo</label>
-      <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
+      <i class="form__state-validation fa" aria-hidden="true"></i>
       <p class="form__error">Debes escribir un correo valido.</p>
     </div>
 
@@ -59,12 +59,12 @@
       <input
         type="tel"
         class="form__input"
-        name="group__phone"
+        name="phone"
         id="phone"
         placeholder="Tel&eacute;fono"
       />
       <label for="phone" class="form__label">Tel&eacute;fono</label>
-      <i class="form__state-validation fa fa-times" aria-hidden="true"></i>
+      <i class="form__state-validation fa" aria-hidden="true"></i>
       <p class="form__error">Debes escribir un tel&eacute;fono valido.</p>
     </div>
 
@@ -81,13 +81,14 @@
       <label for="content" class="form__label content"
       >Descripci&oacute;n</label
     >
+    <i class="form__state-validation fa" aria-hidden="true"></i>
       <p class="form__error">
         Debe escribir un contenido con m&aacuteximo 300 caracteres.
       </p>
     </div>
 
     <!-- Validacion del correo -->
-    <div class="form__group" id="group__validation">
+    <div class="form__group" id="form__validation">
       <p class="form__message">
         <span><i class="fa fa-exclamation" aria-hidden="true"></i></span>
         Enviado existosamente
