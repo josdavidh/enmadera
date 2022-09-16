@@ -149,8 +149,20 @@ nav.container{
   width: 40px;
 }
 
+.nav__links::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 218px;
+  background-image: url("../assets/img/bg-mobile-nav.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .nav__links{
-  background-color: #e6e6e6;
+  background-color: var(--gray);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -187,6 +199,10 @@ nav.container{
   letter-spacing: 2px;
 }
 
+.nav__link.btn {
+  background-color: var(--gray);
+}
+
 @media (min-width:768px) {
   .nav{
       --state-hamburguer:scale(0);
@@ -198,6 +214,9 @@ nav.container{
       --state-close: scale(0);
   }
 
+  .nav__links::after {
+    display: none;
+  }
   .nav__links{
       padding: 0;
       background-color: unset;
@@ -219,7 +238,10 @@ nav.container{
   .nav__item--button {
     position: unset;
     margin-left: 18px;
+  }
 
+  .nav__link.btn {
+    background-color: transparent;
   }
 }
 
@@ -375,6 +397,7 @@ nav.container{
 }
 
 .header__main {
+  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: column-reverse;
@@ -687,7 +710,7 @@ nav.container{
 /*===========About Section===========*/
 
 .about {
-  overflow: hidden;
+  overflow-x: hidden;
   display: grid;
   max-width: 1700px;
   margin: 0 auto;
@@ -1223,9 +1246,6 @@ nav.container{
   margin-top: 30px;
 }
 
-.banner__button i {
-  display: none;
-}
 
 @media(min-width: 768px){
 
@@ -1244,10 +1264,6 @@ nav.container{
 
   .banner__button{
     margin-top: 10px;
-  }
-
-  .banner__button i {
-    display: block;
   }
 
 }
@@ -1379,6 +1395,7 @@ nav.container{
   display: grid;
   grid-template-rows: repeat(3, max-content);
   justify-items: center;
+  overflow-x: hidden;
 }
 
 .contact::before {
