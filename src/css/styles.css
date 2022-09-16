@@ -398,6 +398,7 @@ nav.container{
 
 .header__main {
   overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
   display: flex;
   flex-direction: column-reverse;
@@ -711,6 +712,7 @@ nav.container{
 
 .about {
   overflow-x: hidden;
+  overflow-y: hidden;
   display: grid;
   max-width: 1700px;
   margin: 0 auto;
