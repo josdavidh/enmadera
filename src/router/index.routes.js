@@ -24,14 +24,6 @@ const router = (route) => {
         main.appendChild(pages.banner());
         main.appendChild(pages.footer());
         break;
-    case "#testimonios":
-        main.appendChild(pages.testimonials());
-        main.appendChild(pages.footer());
-        break;
-    case "#preguntas":
-        main.appendChild(pages.questions());
-        main.appendChild(pages.footer());
-        break;
     case "#contacto":
         main.appendChild(pages.contact());
         utils.form();
@@ -45,6 +37,8 @@ const router = (route) => {
         main.appendChild(pages.about());
         main.appendChild(pages.banner());
         main.appendChild(pages.testimonials());
+        main.appendChild(pages.questions());
+        utils.showQuestions();
         main.appendChild(pages.footer());
         break;
   }

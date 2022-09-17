@@ -1201,6 +1201,7 @@ nav.container{
 /* Banner */
 .banner {
   position: relative;
+  z-index: 10;
   width: 90%;
   max-width: 1600px;
   margin: 50px auto 10px;
@@ -1270,7 +1271,7 @@ nav.container{
 
 }
 
-/* Testimonials Sections */
+/*========Testimonial Section=========*/
 .testimonials{
   position: relative;
   margin-bottom: 100px;
@@ -1388,6 +1389,90 @@ nav.container{
     background-image: url("../assets/img/bg-intro-left-desktop-copy.svg");
   }
 }
+
+/*=========Questions Section=========*/
+.questions {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 ;
+}
+
+.questions h2 {
+  margin: 0 0 30px 10px;
+  color: var(--darkBrown);
+  font-size: 3.5rem;
+  line-height: 3.7rem;
+}
+
+.questions__acordion {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.questions__item {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--middleBeige);
+}
+
+.questions__button {
+  position: relative;
+  display: block;
+  margin: 10px 0 0 0;
+  padding-left: 5px;
+  text-align: left;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  transition: .2s ease-in-out;
+}
+
+.questions__button:hover {
+  color: var(--middleBeige);
+}
+
+.questions__icon {
+  position: relative;
+  top: -2px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  font-size: 3rem;
+}
+
+.questions__button[aria-expanded="true"] + .questions__content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.questions__content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.questions__content p {
+  padding: 5px;
+  font-size: 1.7rem;
+  line-height: 1.9rem;
+  color: var(--transparentBrown);
+}
+
+@media (min-width:768px) {
+  .questions h2 {
+    margin: 0 auto 0 145px;
+  }
+  .questions__acordion{
+    max-width: 768px;
+    margin: 0 auto 0 145px;
+  }
+}
+
+
 /*==============Form section==============*/
 
 .contact {
