@@ -13,6 +13,7 @@ import muebleBano2 from "../assets/img/muebleBano2.jpg";
 
 import muebleEstudio from "../assets/img/muebleEstudio.png";
 import repisaDecorativa from "../assets/img/repisaDecorativa.png";
+import repisaDecorativa2 from "../assets/img/repisaDecorativa2.jpg";
 import muebleBar from "../assets/img/muebleBar.png";
 import muebleExhibidor from "../assets/img/muebleExhibidor.png";
 import mesaCircular1 from "../assets/img/mesaCircular1.png";
@@ -24,6 +25,15 @@ import recepcion1 from "../assets/img/recepcion1.jpg";
 import recepcion2 from "../assets/img/recepcion2.jpg";
 import recibidor1 from "../assets/img/recibidor1.jpg";
 import recibidor2 from "../assets/img/recibidor2.jpg";
+import recibidor3 from "../assets/img/recibidor3.jpg";
+
+import silla1 from "../assets/img/silla1.jpg";
+import silla2 from "../assets/img/silla2.jpg";
+import silla3 from "../assets/img/silla3.jpg";
+
+import guardaVinos from "../assets/img/guardaVinos.jpg";
+import cuadro from "../assets/img/cuadro.jpg"
+
 
 export const projectsImg = [
   {
@@ -36,17 +46,17 @@ export const projectsImg = [
   },
   {
     category: "generales",
-    images: [gabineteCocina, muebleBano1, muebleBano2],
+    images: [silla1, silla2, silla3, gabineteCocina, muebleBano1, muebleBano2],
   },
   {
     category: "especiales",
     images: [
-      muebleEstudio,
-      repisaDecorativa,
-      muebleBar,
-      muebleExhibidor,
       mesaCircular1,
       mesaCircular2,
+      guardaVinos,
+      cuadro,
+      repisaDecorativa,
+      repisaDecorativa2,
     ],
   },
   {
@@ -54,17 +64,16 @@ export const projectsImg = [
     images: [
       biblioteca,
       exhibidorAlmacen,
-      recepcion1,
-      recepcion2,
-      recibidor1,
-      recibidor2,
+      muebleEstudio,
+      muebleBar,
+      muebleExhibidor,
+
     ],
   },
   {
-    category: "adicionales",
+    category: "recibidores",
     images: [
-      biblioteca,
-      exhibidorAlmacen,
+      recibidor3,
       recepcion1,
       recepcion2,
       recibidor1,

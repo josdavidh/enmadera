@@ -37,8 +37,8 @@ const router = (route) => {
         main.appendChild(pages.about());
         main.appendChild(pages.banner());
         main.appendChild(pages.testimonials());
-        main.appendChild(pages.questions());
-        utils.showQuestions();
+        // main.appendChild(pages.questions());
+        // utils.showQuestions();
         main.appendChild(pages.footer());
         break;
   }

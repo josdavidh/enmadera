@@ -184,11 +184,14 @@ nav.container{
   list-style: none;
   display: flex;
   align-items: center;
+  transform: translate(0, -300%);
 }
 
 .nav__item--button {
   justify-self: center;
   position: absolute;
+  z-index: 10;
+  transform: translate(0, -200%);
   bottom: 40px;
 }
 
@@ -233,6 +236,10 @@ nav.container{
   .nav__link{
       font-size: 1.6rem;
       letter-spacing: none;
+  }
+
+  .nav__item {
+    transform: unset;
   }
 
   .nav__item--button {
@@ -730,7 +737,7 @@ nav.container{
 .about__img1 {
   grid-area: image1;
   height: 300px;
-  background-image: url("../assets/img/gabineteCocina.jpg");
+  background-image: url("../assets/img/silla3.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -768,9 +775,9 @@ nav.container{
 .about__img2 {
   grid-area: image2;
   height: 300px;
-  background-image: url("../assets/img/repisaDecorativa.png");
+  background-image: url("../assets/img/mesaCircular2.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 
 .about__descriptions {
@@ -786,7 +793,7 @@ nav.container{
 .about__img3 {
   grid-area: image3;
   height: 300px;
-  background-image: url("../assets/img/separador1.jpg");
+  background-image: url("../assets/img/cuadro.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -797,29 +804,35 @@ nav.container{
     margin-bottom: 80px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-areas: 
-    "image2 image2 image2 image2 cta cta cta"
-    "image2 image2 image2 image2 cta cta cta"
-    "image2 image2 image2 image2 cta cta cta"
-    "image1 image1 descriptions descriptions descriptions image3 image3"
-    "image1 image1 descriptions descriptions descriptions image3 image3";
+    "image1 image1 image1 image1 cta cta cta"
+    "image1 image1 image1 image1 cta cta cta"
+    "image1 image1 image1 image1 cta cta cta"
+    "image2 image2 descriptions descriptions descriptions image3 image3"
+    "image2 image2 descriptions descriptions descriptions image3 image3";
   }
 
-  .about__img2 {
-    height: 400px;
-    margin: 0 20px 0 70px;
-  }
+
 
   .about__img1{
     margin: 15px 0 0 70px;
   }
 
-  .about__img3{
-    margin: 15px 70px 0 0;
+  .about__img2 {
+    margin: 0 20px 0 70px;
   }
 
-  .about__img1,
+  .about__img3{
+    margin: 0 70px 0 0;
+  }
+
+  .about__img1{
+    height: 400px;
+  }
+
+  .about__img2,
   .about__img3 {
-    height: 320px;
+    width: 330px;
+    height: 300px;
   }
 
   .about__content {
@@ -1151,8 +1164,8 @@ nav.container{
     grid-template-areas: 
     "project1 project1 empty empty"
     "project1 project1 project2 project3"
-    "project4 project4 project6 project6"
-    "project5 project5 project6 project6";
+    "project5 project5 project6 project6"
+    "project4 project4 project6 project6";
   }
 
   .project1 {
