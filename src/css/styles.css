@@ -471,6 +471,7 @@ nav.container{
 
 .header__button {
   position: relative;
+  display: inline-block;
   z-index: 1;
   margin-top: 5px;
 }
