@@ -472,7 +472,7 @@ nav.container{
   direction: rtl;
 }
 
-.header__buttons a {
+.header__buttons button {
   padding: 8px 3px;
 }
 
@@ -668,12 +668,12 @@ nav.container{
   text-align: center;
 }
 
-.services__item h4,
+.services__item h3,
 .services__item p {
   width: 100%;
 }
 
-.services__item h4 {
+.services__item h3 {
   font-size: 2.2rem;
 }
 
