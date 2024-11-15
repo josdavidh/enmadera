@@ -760,6 +760,10 @@ nav.container{
   line-height: 3.7rem;
 }
 
+.about__title--secondary {
+  margin-top: 15px;
+}
+
 .about__subtitle {
   color: var(--darkBrown);
   font-size: 2.2rem;
@@ -808,7 +812,9 @@ nav.container{
     margin: 50px auto;
     margin-bottom: 80px;
     grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, max-content);
     grid-template-areas: 
+    "image1 image1 image1 image1 cta cta cta"
     "image1 image1 image1 image1 cta cta cta"
     "image1 image1 image1 image1 cta cta cta"
     "image1 image1 image1 image1 cta cta cta"
@@ -816,10 +822,9 @@ nav.container{
     "image2 image2 descriptions descriptions descriptions image3 image3";
   }
 
-
-
   .about__img1{
-    margin: 15px 0 0 70px;
+    margin: 0 0 0 70px;
+    height: 100%;
   }
 
   .about__img2 {
@@ -828,10 +833,6 @@ nav.container{
 
   .about__img3{
     margin: 0 70px 0 0;
-  }
-
-  .about__img1{
-    height: 400px;
   }
 
   .about__img2,
